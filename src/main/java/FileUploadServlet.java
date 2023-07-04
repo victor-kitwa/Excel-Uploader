@@ -86,8 +86,7 @@ public class FileUploadServlet extends HttpServlet {
             try {
                 Workbook workbook = WorkbookFactory.create(file);
                 Sheet sheet = workbook.getSheetAt(0);
-                // Perform your specific validation logic here
-                // For example, check the number of columns
+
                 int expectedColumns = 3;
                 Row headerRow = sheet.getRow(0);
                 int actualColumns = headerRow == null ? 0 : headerRow.getLastCellNum();
